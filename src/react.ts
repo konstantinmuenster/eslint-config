@@ -9,8 +9,8 @@ const config: Linter.Config = {
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:react-hooks/recommended',
-    './typescript.ts',
+    './index.ts',
   ],
 };
 
-export default config;
+export = config;

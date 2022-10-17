@@ -4,4 +4,4 @@ const config: Linter.Config = {
   extends: ['next/core-web-vitals', './react.ts'],
 };
 
-export default config;
+export = config;
