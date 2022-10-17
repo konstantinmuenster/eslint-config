@@ -9,7 +9,7 @@ const config: Linter.Config = {
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
     'plugin:react-hooks/recommended',
-    './index.ts',
+    './index.js',
   ],
   settings: {
     react: {
