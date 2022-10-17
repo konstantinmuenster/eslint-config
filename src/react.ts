@@ -11,6 +11,11 @@ const config: Linter.Config = {
     'plugin:react-hooks/recommended',
     './index.ts',
   ],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
 };
 
 export = config;
