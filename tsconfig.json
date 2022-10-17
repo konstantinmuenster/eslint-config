@@ -1,0 +1,7 @@
+{
+  "extends": "tsconfigs/nodejs-module",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "include": ["index.ts", "next.ts", "react.ts", "typescript.ts"]
+}
