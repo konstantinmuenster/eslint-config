@@ -1,5 +1,4 @@
 import type { Linter } from 'eslint';
-import '@rushstack/eslint-patch/modern-module-resolution';
 
 const config: Linter.Config = {
   parser: '@typescript-eslint/parser',
