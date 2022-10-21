@@ -1,7 +1,12 @@
-import type { Linter } from 'eslint';
+import { FlatCompat } from '@eslint/eslintrc';
 
-const config: Linter.Config = {
-  extends: ['next/core-web-vitals', './react.js'],
-};
+import { ReactTypescriptEslintConfig } from './react';
 
-export = config;
+const compat = new FlatCompat({
+  baseDirectory: __dirname,
+});
+
+export const NextEslintConfig = [
+  compat.extends('next/core-web-vitals'),
+  ...ReactTypescriptEslintConfig,
+];

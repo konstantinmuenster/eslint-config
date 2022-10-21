@@ -1,20 +1,17 @@
-import type { Linter } from 'eslint';
+import { JavascriptEslintConfig } from './javascript';
+import { ReactTypescriptEslintConfig } from './react';
+import { TypescriptEslintConfig } from './typescript';
+import { NextEslintConfig } from './next';
 
-const config: Linter.Config = {
-  parser: '@typescript-eslint/parser',
-  extends: ['eslint:recommended', 'prettier'],
-  overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-      excludedFiles: ['*.js'],
-      plugins: ['@typescript-eslint'],
-      extends: ['plugin:@typescript-eslint/recommended'],
-      rules: {
-        '@typescript-eslint/no-unused-vars': 'error',
-        '@typescript-eslint/no-explicit-any': 'error',
-      },
-    },
-  ],
+export {
+  JavascriptEslintConfig,
+  TypescriptEslintConfig,
+  ReactTypescriptEslintConfig,
+  NextEslintConfig,
 };
 
-export = config;
+export default [
+  ...JavascriptEslintConfig,
+  ...TypescriptEslintConfig,
+  ...ReactTypescriptEslintConfig,
+];
