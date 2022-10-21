@@ -1,4 +1,5 @@
 import typescriptParser from '@typescript-eslint/parser';
+import globals from 'globals';
 import { FlatCompat } from '@eslint/eslintrc';
 
 import { TypescriptEslintConfig } from './typescript';
@@ -19,6 +20,7 @@ export const ReactTypescriptEslintConfig = [
     languageOptions: {
       parser: typescriptParser,
       globals: {
+        ...globals.browser,
         React: true,
         JSX: true,
       },
